@@ -2,8 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(-bckgr-color);
-  font-family: var(--font-family);
+  background-color: var(--bckgr-color);
+  font-family: var(--font-family), "Courier New", monospace;
   background-image: var(--cover-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -41,7 +41,7 @@
   top: 10px;
   right: 19px;
   gap: 10px;
-  align-items: center;
+  align-items: center;  
   text-transform: uppercase;
   line-height: 138.889%;
 }
@@ -104,7 +104,7 @@
 .header__theme-menu-button {
   background-color: transparent;
   color: var(--menu-color);
-  font-family: var(--font-family);
+  font-family: var(--font-family), "Courier New", monospace;
   text-transform: lowercase;
   text-align: center;
   border: none;
@@ -287,6 +287,12 @@
   gap: 20px;
 }
 
+.section__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;}
+
 .section__subtitle {
   font-size: 18px;
   font-weight: 700;
@@ -378,13 +384,14 @@
 
 @media (width >= 1024px) {
   .causes {
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)); 
     column-gap: 12px;
+    grid-auto-rows: auto;
   }
 
   .advice {
-    column-gap: 12px;
+    column-gap: 20px;
+    grid-template-columns: 0.97fr 2fr;
   }
 
   .causes .section__list {
@@ -395,6 +402,10 @@
 
   .causes .section__list-item {
     width: 32%;
+  }
+
+  .reasons {
+    grid-template-columns: 0.97fr 2fr;
   }
 }
 
