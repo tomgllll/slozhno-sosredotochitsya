@@ -327,7 +327,7 @@
   .reasons {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 12px;
+    column-gap: 20px;
     grid-template-areas: 
     "reasons__title reasons__list";
   }
@@ -344,7 +344,7 @@
   .advice {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 12px;
+    column-gap: 20px;
     grid-template-areas: 
     "advice__title advice__list";
   }
@@ -381,7 +381,11 @@
   .causes {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(3, 1fr);
-   
+    column-gap: 12px;
+  }
+
+  .advice {
+    column-gap: 12px;
   }
 
   .causes .section__list {
