@@ -167,6 +167,7 @@
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
   }
 }
 
@@ -302,6 +303,12 @@
   margin-block-end: 10px;
 }
 
+@media (width >= 768px) {
+  .images .section__list-item-title {
+    margin-block-end: 20px;
+  }
+}
+
 .section__images {
   display: grid;
   grid-template-rows: auto;
@@ -320,7 +327,7 @@
   .reasons {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
+    column-gap: 12px;
     grid-template-areas: 
     "reasons__title reasons__list";
   }
@@ -337,7 +344,7 @@
   .advice {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
+    column-gap: 12px;
     grid-template-areas: 
     "advice__title advice__list";
   }
